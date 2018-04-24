@@ -12,11 +12,11 @@
   sdk.init()
     .then(()=>{
       console.log('This code is executed after SDK successfully initializes');
-      sdk.connect()
+      return sdk.connect();
     })
     .then(()=>{
       console.log('This code is executed after SDK is successfully connected to Voximplant');
-      sdk.login('username@appname.accname.voximplant.com','pass')
+      return sdk.login('username@appname.accname.voximplant.com','pass');
     })
     .then(()=>{
       console.log('This code is executed on successfull login');
